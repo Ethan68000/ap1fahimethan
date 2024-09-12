@@ -1,0 +1,24 @@
+#surenteteplanning{
+    background-color: rgba(164, 158, 158,0.5);
+    color: rgb(128, 17, 128);
+    text-align: right;
+    padding: 10px;
+    font-size: 1.3em;
+
+}
+
+button {
+    background: none;               /* Pas de fond */
+    border: none;                   /* Pas de bordure */
+    color: rgb(128, 17, 128);       /* Couleur violet pour le texte des boutons */
+    font-size: 1.2em;               /* Taille du texte des boutons */
+    cursor: pointer;                /* Changer le curseur en pointeur */
+}
+
+#Planningjourent {
+    display: grid;
+    grid-template-columns: 100px repeat(7, 200px); /* 1 colonne pour "Heures", 7 colonnes pour les jours */
+    grid-template-rows: 40px; /* Hauteur des lignes, ajustable selon tes besoins */
+    padding: 5px;
+    background-color: rgba(164, 158, 158, 0.5); /* Couleur de fond pour le conteneur */
+}
