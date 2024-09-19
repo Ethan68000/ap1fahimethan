@@ -32,6 +32,21 @@ td:not(:first-child) {
     width: 250px;
 }
 
-details{
-    text-align: right;
+#planningsma {
+    display: flex;
+    align-items: center;
+}
+
+#planningsma button {
+    background-color: rgba(140, 88, 231, 0.5);
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    margin: 5px;
+    color: #000000;
+}
+
+#parametrer {
+    margin-left: auto;
+    font-size: 16px;
 }
