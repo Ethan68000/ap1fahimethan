@@ -1,5 +1,5 @@
 #surenteteplanning{
-    background-color: rgba(164, 158, 158,0.5);
+    background-color: rgba(204, 198, 198, 0.5);
     color: rgb(128, 17, 128);
     text-align: right;
     padding: 10px;
@@ -8,15 +8,15 @@
 }
 
 #planning button {
-    background: none;               /* Pas de fond */
-    border: none;                   /* Pas de bordure */
-    color: rgb(128, 17, 128);       /* Couleur violet pour le texte des boutons */
-    font-size: 1.2em;               /* Taille du texte des boutons */
-    cursor: pointer;                /* Changer le curseur en pointeur */
+    background: none;
+    border: none;          
+    color: rgb(128, 17, 128); 
+    font-size: 1.2em;       
+    cursor: pointer;
 }
 
 #premiereligne {
-    background-color: rgba(164, 158, 158,0.5);
+    background-color: rgba(204, 198, 198,0.5);
     border: none;
 }
 td{
@@ -54,4 +54,8 @@ header nav ul li a {
 #parametrer {
     margin-left: auto;
     font-size: 16px;
+}
+
+table {
+    border: none;
 }
