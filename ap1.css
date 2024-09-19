@@ -15,32 +15,17 @@ button {
     cursor: pointer;                /* Changer le curseur en pointeur */
 }
 
-#Planningjourent {
-    display: grid;
-    grid-template-columns: 60px repeat(7, 200px); /* 1 colonne pour "Heures", 7 colonnes pour les jours */
-    grid-template-rows: 40px; /* Hauteur des lignes, ajustable selon tes besoins */
+#premiereligne {
+    border: none;
+}
+td{
     padding: 5px;
-    background-color: rgba(164, 158, 158, 0.5); /* Couleur de fond pour le conteneur */
+}
+td:first-child {
+    width: 50px;
+    border: none;
 }
 
-#Jourent {
-    color: black; /* Texte en blanc pour contraster avec le fond noir */
-    justify-content: center;
-    text-align: center;
-    display: flex; /* Utilise Flexbox pour centrer le texte */
-    border: 1px solid rgba(0, 0, 0, 0.5); /* Bordure blanche pour les cellules */
-    box-sizing: border-box; /* Inclut les bordures dans les dimensions des cellules */
-}
-
-#jours{
-    color: black;
-    border: 1px solid rgba(0, 0, 0, 0.5); /* Bordure blanche pour les cellules */
-    box-sizing: border-box; /* Inclut les bordures dans les dimensions des cellules */
-}
-
-
-#content {
-    
-    overflow-x: hidden;
-    overflow-y: auto;
+td:not(:first-child) {
+    width: 250px;
 }
