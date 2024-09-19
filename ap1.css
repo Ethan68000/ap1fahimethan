@@ -32,18 +32,23 @@ td:not(:first-child) {
     width: 250px;
 }
 
-#planningsma {
+header nav ul {
+    list-style: none;
     display: flex;
-    align-items: center;
+    padding: 0;
 }
 
-#planningsma button {
-    background-color: rgba(140, 88, 231, 0.5);
-    border: none;
-    font-size: 20px;
+header nav ul li {
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
     border-radius: 20px;
-    margin: 5px;
+    font-size: 16px;
     color: #000000;
+    background-color: rgba(140, 88, 231, 0.5); /* Fond légèrement violet pour inactif */
 }
 
 #parametrer {
