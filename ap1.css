@@ -7,7 +7,7 @@
 
 }
 
-button {
+#planning button {
     background: none;               /* Pas de fond */
     border: none;                   /* Pas de bordure */
     color: rgb(128, 17, 128);       /* Couleur violet pour le texte des boutons */
@@ -16,10 +16,12 @@ button {
 }
 
 #premiereligne {
+    background-color: rgba(164, 158, 158,0.5);
     border: none;
 }
 td{
     padding: 5px;
+    text-align: center;
 }
 td:first-child {
     width: 50px;
@@ -28,4 +30,8 @@ td:first-child {
 
 td:not(:first-child) {
     width: 250px;
+}
+
+details{
+    text-align: right;
 }
