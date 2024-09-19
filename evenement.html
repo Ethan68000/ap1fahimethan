@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulaire de Planning</h1>
+    <form action="submit" method="post">
+        <label for="nomevent">nom de l'évenement :</label>
+        <input type="text" id="nomevent" required><br><br>
+
+        <label for="start_date">Jour de début :</label>
+        <input type="date" id="start_date" required><br><br>
+
+        <label for="jourdebut">Jour de fin :</label>
+        <input type="date" id="jourfin" required><br><br>
+
+        <label for="heuredebut">Heure de début :</label>
+        <input type="time" id="heuredebut" required><br><br>
+
+        <label for="heurefin">Heure de fin :</label>
+        <input type="time" id="heurefin" required><br><br>
+
+        <label for="colorevent">Couleur de l'évenement :</label>
+        <input type="color" id="colorevent" required><br><br>
+
+        <button type="submit">Envoyer</button>
+        <button type="button" onclick="window.location.href='/btssio2/ap1fahimethan/ap1.html';">Revenir au planning</button>
+    </form>
+</body>
+</html>

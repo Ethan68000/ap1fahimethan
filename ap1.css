@@ -51,6 +51,10 @@ header nav ul li a {
     background-color: rgba(140, 88, 231, 0.5); /* Fond légèrement violet pour inactif */
 }
 
+header nav ul details li a  {
+    background-color: white;
+    border: 1px solid black ;
+}
 #parametrer {
     margin-left: auto;
     font-size: 16px;
