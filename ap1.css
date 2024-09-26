@@ -15,7 +15,7 @@
     cursor: pointer;
 }
 
-#premiereligne {
+table tr:first-child td {
     background-color: rgba(204, 198, 198,0.5);
     border: none;
 }

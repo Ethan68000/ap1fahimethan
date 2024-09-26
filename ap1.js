@@ -1,26 +1,16 @@
 
-// Script pour ajouter les dates locales aux jours de la semaine
 window.onload = function() {
-    // Récupérer le lundi de la semaine courante
+    const jours = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
+
     let today = new Date();
-    let dayOfWeek = today.getDay(); // 0 = Dimanche, 1 = Lundi, ..., 6 = Samedi
-
-    // Ajuster pour commencer au lundi
+    let dayOfWeek = today.getDay();
     let monday = new Date(today);
-    monday.setDate(today.getDate() - dayOfWeek + (dayOfWeek === 0 ? -6 : 1)); 
+    monday.setDate(today.getDate() - dayOfWeek + (dayOfWeek === 0 ? -6 : 1)); // Ajuster pour le lundi
 
-    // Sélectionner les cellules du tableau des jours
-    const days = document.querySelectorAll("#premiereligne");
-
-    // Ajouter la date à chaque jour de la semaine
-    for (let i = 1; i <= 7; i++) { // De lundi à vendredi
+    jours.forEach((jour, index) => {
         let currentDay = new Date(monday);
-        currentDay.setDate(monday.getDate() + (i - 1)); // Calculer la date correspondante
-
-        // Formater la date en DD/MM
-        let formattedDate = currentDay.toLocaleDateString("fr-FR");
-
-        // Ajouter la date à côté du jour (Lundi, Mardi, ...)
-        days[i].innerHTML += ` ${formattedDate}`;
-    }
-}
+        currentDay.setDate(monday.getDate() + index);
+        let formattedDate = currentDay.toLocaleDateString("fr-FR", { day: '2-digit', month: '2-digit' });
+        document.getElementById(jour).innerHTML += ` ${formattedDate}`;
+    });
+};
