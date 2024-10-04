@@ -1,4 +1,3 @@
-
 window.onload = function() {
     const jours = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
 
@@ -13,14 +12,17 @@ window.onload = function() {
         let formattedDate = currentDay.toLocaleDateString("fr-FR", { day: '2-digit', month: '2-digit' });
         document.getElementById(jour).innerHTML += ` ${formattedDate}`;
     });
+
 };
 
-function horloge() {
-    let tempsreel = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); // hh:mm sans les secondes
-    document.getElementById("localTime").innerHTML = tempsreel; // Mise à jour de l'heure locale
-    setTimeout(horloge, 1000); // Mise à jour toutes les secondes
+function semainePlus() {
+    currentMonday.setDate(currentMonday.getDate() + 7); // Avancer d'une semaine
+    afficherSemaine(currentMonday);
 }
 
-window.onload = function() {
-    horloge();
-};
+function semaineMoins() {
+    currentMonday.setDate(currentMonday.getDate() - 7); // Reculer d'une semaine
+    afficherSemaine(currentMonday);
+}
+
+

@@ -1,190 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="ap1.css" rel="stylesheet">
-    <script src="ap1.js"></script>
-    <title>AP1 planning</title>
-</head>
-<body>
-    <h1>Planning</h1>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Jour</a></li>
-                <li><a href="#">Semaine</a></li>
-                <li><a href="#">Mois</a></li>
-                <details id="parametrer">
-                    <summary>Ajouter un evenement</summary>
-                    <br>
-                    <li><a href="evenement.html">Ajouter un evenement</a>
-                </details>
-            </ul>
-        </nav>
-    </header>
-    <br>
-    <div id="main">
-        <div id="planning" class="planning">
-            <div id="surenteteplanning">
-                <button  onclick="semainemoins" title="semaine précedente"><</button>
-                <strong>Planning</strong>
-                <button  onclick="semaineplus" title="semaine suivante">></button>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="ap1.css" rel="stylesheet">
+        <script src="ap1.js"></script>
+        <title>AP1 planning</title>
+    </head>
+    <body>
+        <h1>Planning</h1>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Jour</a></li>
+                    <li><a href="#">Semaine</a></li>
+                    <li><a href="#">Mois</a></li>
+                    <details id="parametrer">
+                        <summary>Ajouter un evenement</summary>
+                        <br>
+                        <li><a href="evenement.html">Ajouter un evenement</a>
+                    </details>
+                </ul>
+            </nav>
+        </header>
+        <br>
+        <div id="main">
+            <div id="planning" class="planning">
+                <div id="surenteteplanning">
+                    <button  onclick="semaineMoins()" title="semaine précedente"><</button>
+                    <strong>Planning</strong>
+                    <button  onclick="semainePlus()" title="semaine suivante">></button>
+                </div>
             </div>
         </div>
-    </div>
-    <table border="1">
-        <tr>
-            <td>heures</td>
-            <td id="lundi">Lundi</td>
-            <td id="mardi">Mardi</td>
-            <td id="mercredi">Mercredi</td>
-            <td id="jeudi">Jeudi</td>
-            <td id="vendredi">Vendredi</td>
-            <td id="samedi">Samedi</td>
-            <td id="dimanche">Dimanche</td>
-        </tr>
-        <tr>
-            <td id="Plheures">08:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td id="localTime">--:--</td> <!-- Ajoute une ligne pour l'heure locale -->
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-            <td id="Plheures">09:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td id="Plheures">10:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td id="Plheures">11:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td id="Plheures">12:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td id="Plheures" >13:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td id="Plheures">14:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td id="Plheures">15:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td id="Plheures">16:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td id="Plheures">17:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr></tr>
-            <td id="Plheures">18:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td id="Plheures">19:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td id="Plheures">20:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-    </div>
+        <table border="1">
+            <tr>
+                <td>heures</td>
+                <td id="lundi">Lundi</td>
+                <td id="mardi">Mardi</td>
+                <td id="mercredi">Mercredi</td>
+                <td id="jeudi">Jeudi</td>
+                <td id="vendredi">Vendredi</td>
+                <td id="samedi">Samedi</td>
+                <td id="dimanche">Dimanche</td>
+            </tr>
+            <tr>
+                <td id="Plheures">08:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td id="Plheures">09:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="Plheures">10:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="Plheures">11:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="Plheures">12:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="Plheures" >13:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="Plheures">14:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="Plheures">15:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="Plheures">16:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="Plheures">17:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr></tr>
+                <td id="Plheures">18:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="Plheures">19:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="Plheures">20:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        </div>
 
-</body>
-</html>
+    </body>
+    </html>
