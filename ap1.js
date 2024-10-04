@@ -1,6 +1,5 @@
-window.onload = function() {
+function joursemaine() {
     const jours = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
-
     let today = new Date();
     let dayOfWeek = today.getDay();
     let monday = new Date(today);
@@ -12,17 +11,16 @@ window.onload = function() {
         let formattedDate = currentDay.toLocaleDateString("fr-FR", { day: '2-digit', month: '2-digit' });
         document.getElementById(jour).innerHTML += ` ${formattedDate}`;
     });
-
-};
+}
 
 function semainePlus() {
-    currentMonday.setDate(currentMonday.getDate() + 7); // Avancer d'une semaine
-    afficherSemaine(currentMonday);
+    currentDay.setDate(currentDay.getDate() + 7); // Avancer d'une semaine
+    afficherSemaine(currentDay);
 }
 
 function semaineMoins() {
-    currentMonday.setDate(currentMonday.getDate() - 7); // Reculer d'une semaine
-    afficherSemaine(currentMonday);
+    currentDay.setDate(currentDay.getDate() - 7); // Reculer d'une semaine
+    afficherSemaine(currentDay);
 }
 
 
