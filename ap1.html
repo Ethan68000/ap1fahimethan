@@ -12,9 +12,9 @@
     <header>
         <nav>
             <ul>
+                <li><a href="#">Jour</a></li>
                 <li><a href="#">Semaine</a></li>
                 <li><a href="#">Mois</a></li>
-                <li><a href="#">Année</a></li>
                 <details id="parametrer">
                     <summary>Ajouter un evenement</summary>
                     <br>
@@ -27,9 +27,9 @@
     <div id="main">
         <div id="planning" class="planning">
             <div id="surenteteplanning">
-                <button title="semaine précedente"><</button>
+                <button  onclick="semainemoins" title="semaine précedente"><</button>
                 <strong>Planning</strong>
-                <button title="semaine suivante">></button>
+                <button  onclick="semaineplus" title="semaine suivante">></button>
             </div>
         </div>
     </div>
@@ -46,6 +46,16 @@
         </tr>
         <tr>
             <td id="Plheures">08:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="localTime">--:--</td> <!-- Ajoute une ligne pour l'heure locale -->
             <td></td>
             <td></td>
             <td></td>

@@ -14,3 +14,13 @@ window.onload = function() {
         document.getElementById(jour).innerHTML += ` ${formattedDate}`;
     });
 };
+
+function horloge() {
+    let tempsreel = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); // hh:mm sans les secondes
+    document.getElementById("localTime").innerHTML = tempsreel; // Mise à jour de l'heure locale
+    setTimeout(horloge, 1000); // Mise à jour toutes les secondes
+}
+
+window.onload = function() {
+    horloge();
+};
