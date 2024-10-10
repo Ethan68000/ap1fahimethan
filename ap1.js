@@ -36,3 +36,12 @@ function semaineMoins() {
     currentMonday.setDate(currentMonday.getDate() - 7); // Reculer d'une semaine
     afficherSemaine(currentMonday); // Mettre à jour l'affichage
 }
+
+function afficherdetail() {
+    var nomevent = document.getElementById("nomevent").value;
+    var jourdepart = document.getElementById("jourdepart").value;
+    var jourfin = document.getElementById("jourfin").value;
+    var heuredebut = document.getElementById("heuredebut").value;
+    var heurefin = document.getElementById("heurefin").value;
+    alert("Voici le recap : Nom de l'évenment : "+ nomevent + " \ndébut de l'évenement : " + jourdepart + " à " + heuredebut + " \nfin de l'évenement : " +jourfin+ " à " + heurefin);
+}
