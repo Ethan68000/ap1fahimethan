@@ -63,3 +63,12 @@ header nav ul details li a  {
 table {
     border: none;
 }
+
+.event {
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+}

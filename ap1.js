@@ -46,3 +46,35 @@ function afficherdetail() {
     var colorevent = document.getElementById("colorevent").value;
     alert("Voici le recap : \nNom de l'évenement : "+ nomevent + " \ndébut de l'évenement : " + jourdepart + " à " + heuredebut + " \nfin de l'évenement : " +jourfin+ " à " + heurefin + "\ncode couleur : " +colorevent);
 }
+
+function ajouterEvenement() {
+    var nomevent = document.getElementById("nomevent").value;
+    var jourdepart = document.getElementById("jourdepart").value;
+    var jourfin = document.getElementById("jourfin").value;
+    var heuredebut = document.getElementById("heuredebut").value;
+    var heurefin = document.getElementById("heurefin").value;
+    var colorevent = document.getElementById("colorevent").value;
+
+    // Créer un objet événement
+    var event = {
+        nom: nomevent,
+        jourDepart: jourdepart,
+        jourFin: jourfin,
+        heureDebut: heuredebut,
+        heureFin: heurefin,
+        couleur: colorevent
+    };
+
+    // Stocker dans le localStorage
+    let events = JSON.parse(localStorage.getItem("events")) || [];
+    events.push(event);
+    localStorage.setItem("events", JSON.stringify(events));
+
+    // Redirection vers la page du planning
+    window.location.href = '/btssio2/ap1fahimethan/ap1.html';
+}
+
+window.onload = function() {
+    joursemaine(); // Initialise les jours de la semaine
+    afficherEvenements(); // Affiche les événements
+}
