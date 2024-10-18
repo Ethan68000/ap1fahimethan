@@ -43,5 +43,6 @@ function afficherdetail() {
     var jourfin = document.getElementById("jourfin").value;
     var heuredebut = document.getElementById("heuredebut").value;
     var heurefin = document.getElementById("heurefin").value;
-    alert("Voici le recap : Nom de l'évenment : "+ nomevent + " \ndébut de l'évenement : " + jourdepart + " à " + heuredebut + " \nfin de l'évenement : " +jourfin+ " à " + heurefin);
+    var colorevent = document.getElementById("colorevent").value;
+    alert("Voici le recap : \nNom de l'évenement : "+ nomevent + " \ndébut de l'évenement : " + jourdepart + " à " + heuredebut + " \nfin de l'évenement : " +jourfin+ " à " + heurefin + "\ncode couleur : " +colorevent);
 }
