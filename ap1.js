@@ -76,5 +76,4 @@ function ajouterEvenement() {
 
 window.onload = function() {
     joursemaine(); // Initialise les jours de la semaine
-    afficherEvenements(); // Affiche les événements
 }
