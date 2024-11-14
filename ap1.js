@@ -23,7 +23,11 @@ function afficherSemaine(monday) {
         let currentDay = new Date(monday);
         currentDay.setDate(monday.getDate() + index);
         let formattedDate = currentDay.toLocaleDateString("fr-FR", { day: '2-digit', month: '2-digit' });
-        document.getElementById(jour).innerHTML = `${jour.slice(0)} ${formattedDate}`; // Afficher le jour avec la date
+
+        const element = document.getElementById(jour);
+        if (element) { // Vérifie si l'élément existe avant de le modifier
+            element.innerHTML = `${jour.slice(0)} ${formattedDate}`;
+        }
     });
 }
 
@@ -37,17 +41,9 @@ function semaineMoins() {
     afficherSemaine(currentMonday); // Mettre à jour l'affichage
 }
 
-function afficherdetail() {
-    var nomevent = document.getElementById("nomevent").value;
-    var jourdepart = document.getElementById("jourdepart").value;
-    var jourfin = document.getElementById("jourfin").value;
-    var heuredebut = document.getElementById("heuredebut").value;
-    var heurefin = document.getElementById("heurefin").value;
-    var colorevent = document.getElementById("colorevent").value;
-    alert("Voici le recap : \nNom de l'évenement : "+ nomevent + " \ndébut de l'évenement : " + jourdepart + " à " + heuredebut + " \nfin de l'évenement : " +jourfin+ " à " + heurefin + "\ncode couleur : " +colorevent);
-}
+function afficherdetail(event) {
+    event.preventDefault(); // Empêche l'envoi par défaut du formulaire
 
-function ajouterEvenement() {
     var nomevent = document.getElementById("nomevent").value;
     var jourdepart = document.getElementById("jourdepart").value;
     var jourfin = document.getElementById("jourfin").value;
@@ -55,23 +51,13 @@ function ajouterEvenement() {
     var heurefin = document.getElementById("heurefin").value;
     var colorevent = document.getElementById("colorevent").value;
 
-    // Créer un objet événement
-    var event = {
-        nom: nomevent,
-        jourDepart: jourdepart,
-        jourFin: jourfin,
-        heureDebut: heuredebut,
-        heureFin: heurefin,
-        couleur: colorevent
-    };
-
-    // Stocker dans le localStorage
-    let events = JSON.parse(localStorage.getItem("events")) || [];
-    events.push(event);
-    localStorage.setItem("events", JSON.stringify(events));
-
-    // Redirection vers la page du planning
-    window.location.href = '/btssio2/ap1fahimethan/ap1.html';
+    // Vérifier si tous les champs sont remplis
+    if (nomevent && jourdepart && jourfin && heuredebut && heurefin && colorevent) {
+        alert("Voici le recap : \nNom de l'évenement : " + nomevent + 
+              " \nDébut de l'évenement : " + jourdepart + " à " + heuredebut + 
+              " \nFin de l'évenement : " + jourfin + " à " + heurefin + 
+              "\nCode couleur : " + colorevent);
+    }
 }
 
 window.onload = function() {
