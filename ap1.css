@@ -65,10 +65,11 @@ table {
 }
 
 .event {
+    background-color: transparent; /* Pas besoin de définir ici, car la couleur est appliquée dans JavaScript */
+    color: blue; /* Changez cela selon vos besoins */
     padding: 5px;
-    margin: 2px 0;
     border-radius: 4px;
-    color: white;
-    text-align: center;
     font-size: 0.9em;
+    text-align: center;
+    display: block;
 }
