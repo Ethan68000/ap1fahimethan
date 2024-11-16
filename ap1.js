@@ -68,7 +68,7 @@ function afficherdetail(event) {
     events.push(evenement);
     localStorage.setItem("events", JSON.stringify(events));
 
-    alert("Évènement ajouté avec succès !");
+    alert("Recap de l'évenement \n nom : " + nomevent + "\ndepart évenement : " + jourdepart + " à " +heuredebut+ "\nfin de l'évenement : " +jourfin+ " à " +heurefin);
     afficherEvenements(); // Afficher immédiatement l'événement
     window.location.href = 'ap1.html'; // Retourne au planning
 }
@@ -111,7 +111,6 @@ function afficherEvenements() {
             cellDebut.innerHTML = `<strong class="event">${evenement.nomevent}</strong>`; // Affiche l'événement
         }
     });
-    console.clear(events);
     console.log(events);
 }
 
