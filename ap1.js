@@ -1,14 +1,3 @@
-let currentMonday;
-const joursMapping = {
-    "lundi": "lundi",
-    "mardi": "mardi",
-    "mercredi": "mercredi",
-    "jeudi": "jeudi",
-    "vendredi": "vendredi",
-    "samedi": "samedi",
-    "dimanche": "dimanche"
-};
-
 function joursemaine() {
     const jours = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
     let today = new Date();
@@ -93,22 +82,15 @@ function afficherEvenements() {
         const dateDebut = new Date(`${jourdepart}T${heuredebut}:00Z`);
         const dateFin = new Date(`${jourfin}T${heurefin}:00Z`);
 
-        // Vérifiez si les dates sont valides
-        if (isNaN(dateDebut.getTime()) || isNaN(dateFin.getTime())) {
-            console.error("Date invalide:", dateDebut, dateFin);
-            return; // Ignore cet événement si la date est invalide
-        }
-
         // Trouver la cellule correspondante à l'heure de début
         const jourDebut = dateDebut.toLocaleDateString("fr-FR", { weekday: 'long' }).toLowerCase();
-        const jourIdDebut = joursMapping[jourDebut]; // Utilise l'ID correspondant au jour
         const heureDebut = dateDebut.getUTCHours().toString().padStart(2, '0') + ":00"; // Format HH:MM en UTC
-        const cellDebut = document.querySelector(`td[data-jour="${jourIdDebut}"][data-heure="${heureDebut}"]`);
+        const affichage = document.querySelector(`td[data-jour="${jourDebut}"][data-heure="${heureDebut}"]`);
 
         // Appliquer la couleur et le texte de l'événement sur la cellule correspondante
-        if (cellDebut) {
-            cellDebut.style.backgroundColor = evenement.colorevent; // Applique la couleur
-            cellDebut.innerHTML = `<strong class="event">${evenement.nomevent}</strong>`; // Affiche l'événement
+        if (affichage) {
+            affichage.style.backgroundColor = evenement.colorevent; // Applique la couleur
+            affichage.innerHTML = `<strong class="event">${evenement.nomevent}</strong>`; // Affiche l'événement
         }
     });
     console.log(events);

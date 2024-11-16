@@ -34,7 +34,6 @@ td:not(:first-child) {
 
 header nav ul {
     list-style: none;
-    display: flex;
     padding: 0;
 }
 
