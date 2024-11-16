@@ -111,9 +111,15 @@ function afficherEvenements() {
             cellDebut.innerHTML = `<strong class="event">${evenement.nomevent}</strong>`; // Affiche l'événement
         }
     });
+    console.clear(events);
     console.log(events);
 }
 
+function resetEvenements() {
+    localStorage.removeItem("events"); // Supprime la clé "events" du localStorage
+    console.log("Tous les événements ont été réinitialisés.");
+    afficherEvenements(); // Met à jour l'affichage pour refléter le changement
+}
 
 window.onload = function() {
     joursemaine();

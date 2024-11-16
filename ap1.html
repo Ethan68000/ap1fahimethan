@@ -1,182 +1,182 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="ap1.css" rel="stylesheet">
-        <script src="ap1.js"></script>
-        <title>AP1 planning</title>
-    </head>
-    <body onload="joursemaine(); afficherEvenements();">
-        <h1>Planning</h1>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#">Jour</a></li>
-                    <li><a href="#">Semaine</a></li>
-                    <li><a href="#">Mois</a></li>
-                    <details id="parametrer">
-                        <summary>Ajouter un evenement</summary>
-                        <br>
-                        <li><a href="evenement.html">Ajouter un evenement</a>
-                    </details>
-                </ul>
-            </nav>
-        </header>
-        <br>
-        <div id="main">
-            <div id="planning" class="planning">
-                <div id="surenteteplanning">
-                    <button  onclick="semaineMoins()" title="semaine précedente"><</button>
-                    <strong>Planning</strong>
-                    <button  onclick="semainePlus()" title="semaine suivante">></button>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="ap1.css" rel="stylesheet">
+    <script src="ap1.js"></script>
+    <title>AP1 planning</title>
+</head>
+<body onload="joursemaine(); afficherEvenements();">
+    <h1>Planning</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Jour</a></li>
+                <li><a href="#">Semaine</a></li>
+                <li><a href="#">Mois</a></li>
+                <details id="parametrer">
+                    <summary>Ajouter un evenement</summary>
+                    <br>
+                    <li><a href="evenement.html">Ajouter un evenement</a>
+                </details>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <div id="main">
+        <div id="planning" class="planning">
+            <div id="surenteteplanning">
+                <button  onclick="semaineMoins()" title="semaine précedente"><</button>
+                <strong>Planning</strong>
+                <button  onclick="semainePlus()" title="semaine suivante">></button>
             </div>
         </div>
-        <table border="1">
-            <tr>
-                <td>heures</td>
-                <td id="lundi">Lundi</td>
-                <td id="mardi">Mardi</td>
-                <td id="mercredi">Mercredi</td>
-                <td id="jeudi">Jeudi</td>
-                <td id="vendredi">Vendredi</td>
-                <td id="samedi">Samedi</td>
-                <td id="dimanche">Dimanche</td>
-            </tr>
-            <tr>
-                <td class="Plheures">08:00</td>
-                <td data-jour="lundi" data-heure="08:00"></td>
-                <td data-jour="mardi" data-heure="08:00"></td>
-                <td data-jour="mercredi" data-heure="08:00"></td>
-                <td data-jour="jeudi" data-heure="08:00"></td>
-                <td data-jour="vendredi" data-heure="08:00"></td>
-                <td data-jour="samedi" data-heure="08:00"></td>
-                <td data-jour="dimanche" data-heure="08:00"></td>
-            </tr>
-            
-            <tr>
-                <td id="Plheures">09:00</td>
-                <td data-jour="lundi" data-heure="09:00"></td>
-                <td data-jour="mardi" data-heure="09:00"></td>
-                <td data-jour="mercredi" data-heure="09:00"></td>
-                <td data-jour="jeudi" data-heure="09:00"></td>
-                <td data-jour="vendredi" data-heure="09:00"></td>
-                <td data-jour="samedi" data-heure="09:00"></td>
-                <td data-jour="dimanche" data-heure="09:00"></td>
-            </tr>
-            <tr>
-                <td id="Plheures">10:00</td>
-                <td data-jour="lundi" data-heure="10:00"></td>
-                <td data-jour="mardi" data-heure="10:00"></td>
-                <td data-jour="mercredi" data-heure="10:00"></td>
-                <td data-jour="jeudi" data-heure="10:00"></td>
-                <td data-jour="vendredi" data-heure="10:00"></td>
-                <td data-jour="samedi" data-heure="10:00"></td>
-                <td data-jour="dimanche" data-heure="10:00"></td>
-            </tr>
-            <tr>
-                <td id="Plheures">11:00</td>
-                <td data-jour="lundi" data-heure="11:00"></td>
-                <td data-jour="mardi" data-heure="11:00"></td>
-                <td data-jour="mercredi" data-heure="11:00"></td>
-                <td data-jour="jeudi" data-heure="11:00"></td>
-                <td data-jour="vendredi" data-heure="11:00"></td>
-                <td data-jour="samedi" data-heure="11:00"></td>
-                <td data-jour="dimanche" data-heure="11:00"></td>
-            </tr>
-            <tr>
-                <td id="Plheures">12:00</td>
-                <td data-jour="lundi" data-heure="12:00"></td>
-                <td data-jour="mardi" data-heure="12:00"></td>
-                <td data-jour="mercredi" data-heure="12:00"></td>
-                <td data-jour="jeudi" data-heure="12:00"></td>
-                <td data-jour="vendredi" data-heure="12:00"></td>
-                <td data-jour="samedi" data-heure="12:00"></td>
-                <td data-jour="dimanche" data-heure="12:00"></td>
-            </tr>
-            <tr>
-                <td id="Plheures">13:00</td>
-                <td data-jour="lundi" data-heure="13:00"></td>
-                <td data-jour="mardi" data-heure="13:00"></td>
-                <td data-jour="mercredi" data-heure="13:00"></td>
-                <td data-jour="jeudi" data-heure="13:00"></td>
-                <td data-jour="vendredi" data-heure="13:00"></td>
-                <td data-jour="samedi" data-heure="13:00"></td>
-                <td data-jour="dimanche" data-heure="13:00"></td>
-            </tr>
-            <tr>
-                <td class="Plheures">14:00</td>
-                <td data-jour="lundi" data-heure="14:00"></td>
-                <td data-jour="mardi" data-heure="14:00"></td>
-                <td data-jour="mercredi" data-heure="14:00"></td>
-                <td data-jour="jeudi" data-heure="14:00"></td>
-                <td data-jour="vendredi" data-heure="14:00"></td>
-                <td data-jour="samedi" data-heure="14:00"></td>
-                <td data-jour="dimanche" data-heure="14:00"></td>
-            </tr>
-            <tr>
-                <td class="Plheures">15:00</td>
-                <td data-jour="lundi" data-heure="15:00"></td>
-                <td data-jour="mardi" data-heure="15:00"></td>
-                <td data-jour="mercredi" data-heure="15:00"></td>
-                <td data-jour="jeudi" data-heure="15:00"></td>
-                <td data-jour="vendredi" data-heure="15:00"></td>
-                <td data-jour="samedi" data-heure="15:00"></td>
-                <td data-jour="dimanche" data-heure="15:00"></td>
-            </tr>
-            <tr>
-                <td class="Plheures">16:00</td>
-                <td data-jour="lundi" data-heure="16:00"></td>
-                <td data-jour="mardi" data-heure="16:00"></td>
-                <td data-jour="mercredi" data-heure="16:00"></td>
-                <td data-jour="jeudi" data-heure="16:00"></td>
-                <td data-jour="vendredi" data-heure="16:00"></td>
-                <td data-jour="samedi" data-heure="16:00"></td>
-                <td data-jour="dimanche" data-heure="16:00"></td>
-            </tr>
-            <tr>
-                <td class="Plheures">17:00</td>
-                <td data-jour="lundi" data-heure="17:00"></td>
-                <td data-jour="mardi" data-heure="17:00"></td>
-                <td data-jour="mercredi" data-heure="17:00"></td>
-                <td data-jour="jeudi" data-heure="17:00"></td>
-                <td data-jour="vendredi" data-heure="17:00"></td>
-                <td data-jour="samedi" data-heure="17:00"></td>
-                <td data-jour="dimanche" data-heure="17:00"></td>
-            </tr>
-            <tr>
-                <td class="Plheures">18:00</td>
-                <td data-jour="lundi" data-heure="18:00"></td>
-                <td data-jour="mardi" data-heure="18:00"></td>
-                <td data-jour="mercredi" data-heure="18:00"></td>
-                <td data-jour="jeudi" data-heure="18:00"></td>
-                <td data-jour="vendredi" data-heure="18:00"></td>
-                <td data-jour="samedi" data-heure="18:00"></td>
-                <td data-jour="dimanche" data-heure="18:00"></td>
-            </tr>
-            <tr>
-                <td class="Plheures">19:00</td>
-                <td data-jour="lundi" data-heure="19:00"></td>
-                <td data-jour="mardi" data-heure="19:00"></td>
-                <td data-jour="mercredi" data-heure="19:00"></td>
-                <td data-jour="jeudi" data-heure="19:00"></td>
-                <td data-jour="vendredi" data-heure="19:00"></td>
-                <td data-jour="samedi" data-heure="19:00"></td>
-                <td data-jour="dimanche" data-heure="19:00"></td>
-            </tr>
-            <tr>
-                <td id="Plheures">20:00</td>
-                <td data-jour="lundi" data-heure="20:00"></td>
-                <td data-jour="mardi" data-heure="20:00"></td>
-                <td data-jour="mercredi" data-heure="20:00"></td>
-                <td data-jour="jeudi" data-heure="20:00"></td>
-                <td data-jour="vendredi" data-heure="20:00"></td>
-                <td data-jour="samedi" data-heure="20:00"></td>
-                <td data-jour="dimanche" data-heure="20:00"></td>
-            </tr>
-        </table>
-        </div>
-
-    </body>
-    </html>
+    </div>
+    <table border="1">
+        <tr>
+            <td>heures</td>
+            <td id="lundi">Lundi</td>
+            <td id="mardi">Mardi</td>
+            <td id="mercredi">Mercredi</td>
+            <td id="jeudi">Jeudi</td>
+            <td id="vendredi">Vendredi</td>
+            <td id="samedi">Samedi</td>
+            <td id="dimanche">Dimanche</td>
+        </tr>
+        <tr>
+            <td class="Plheures">08:00</td>
+            <td data-jour="lundi" data-heure="08:00"></td>
+            <td data-jour="mardi" data-heure="08:00"></td>
+            <td data-jour="mercredi" data-heure="08:00"></td>
+            <td data-jour="jeudi" data-heure="08:00"></td>
+            <td data-jour="vendredi" data-heure="08:00"></td>
+            <td data-jour="samedi" data-heure="08:00"></td>
+            <td data-jour="dimanche" data-heure="08:00"></td>
+        </tr>
+        
+        <tr>
+            <td id="Plheures">09:00</td>
+            <td data-jour="lundi" data-heure="09:00"></td>
+            <td data-jour="mardi" data-heure="09:00"></td>
+            <td data-jour="mercredi" data-heure="09:00"></td>
+            <td data-jour="jeudi" data-heure="09:00"></td>
+            <td data-jour="vendredi" data-heure="09:00"></td>
+            <td data-jour="samedi" data-heure="09:00"></td>
+            <td data-jour="dimanche" data-heure="09:00"></td>
+        </tr>
+        <tr>
+            <td id="Plheures">10:00</td>
+            <td data-jour="lundi" data-heure="10:00"></td>
+            <td data-jour="mardi" data-heure="10:00"></td>
+            <td data-jour="mercredi" data-heure="10:00"></td>
+            <td data-jour="jeudi" data-heure="10:00"></td>
+            <td data-jour="vendredi" data-heure="10:00"></td>
+            <td data-jour="samedi" data-heure="10:00"></td>
+            <td data-jour="dimanche" data-heure="10:00"></td>
+        </tr>
+        <tr>
+            <td id="Plheures">11:00</td>
+            <td data-jour="lundi" data-heure="11:00"></td>
+            <td data-jour="mardi" data-heure="11:00"></td>
+            <td data-jour="mercredi" data-heure="11:00"></td>
+            <td data-jour="jeudi" data-heure="11:00"></td>
+            <td data-jour="vendredi" data-heure="11:00"></td>
+            <td data-jour="samedi" data-heure="11:00"></td>
+            <td data-jour="dimanche" data-heure="11:00"></td>
+        </tr>
+        <tr>
+            <td id="Plheures">12:00</td>
+            <td data-jour="lundi" data-heure="12:00"></td>
+            <td data-jour="mardi" data-heure="12:00"></td>
+            <td data-jour="mercredi" data-heure="12:00"></td>
+            <td data-jour="jeudi" data-heure="12:00"></td>
+            <td data-jour="vendredi" data-heure="12:00"></td>
+            <td data-jour="samedi" data-heure="12:00"></td>
+            <td data-jour="dimanche" data-heure="12:00"></td>
+        </tr>
+        <tr>
+            <td id="Plheures">13:00</td>
+            <td data-jour="lundi" data-heure="13:00"></td>
+            <td data-jour="mardi" data-heure="13:00"></td>
+            <td data-jour="mercredi" data-heure="13:00"></td>
+            <td data-jour="jeudi" data-heure="13:00"></td>
+            <td data-jour="vendredi" data-heure="13:00"></td>
+            <td data-jour="samedi" data-heure="13:00"></td>
+            <td data-jour="dimanche" data-heure="13:00"></td>
+        </tr>
+        <tr>
+            <td class="Plheures">14:00</td>
+            <td data-jour="lundi" data-heure="14:00"></td>
+            <td data-jour="mardi" data-heure="14:00"></td>
+            <td data-jour="mercredi" data-heure="14:00"></td>
+            <td data-jour="jeudi" data-heure="14:00"></td>
+            <td data-jour="vendredi" data-heure="14:00"></td>
+            <td data-jour="samedi" data-heure="14:00"></td>
+            <td data-jour="dimanche" data-heure="14:00"></td>
+        </tr>
+        <tr>
+            <td class="Plheures">15:00</td>
+            <td data-jour="lundi" data-heure="15:00"></td>
+            <td data-jour="mardi" data-heure="15:00"></td>
+            <td data-jour="mercredi" data-heure="15:00"></td>
+            <td data-jour="jeudi" data-heure="15:00"></td>
+            <td data-jour="vendredi" data-heure="15:00"></td>
+            <td data-jour="samedi" data-heure="15:00"></td>
+            <td data-jour="dimanche" data-heure="15:00"></td>
+        </tr>
+        <tr>
+            <td class="Plheures">16:00</td>
+            <td data-jour="lundi" data-heure="16:00"></td>
+            <td data-jour="mardi" data-heure="16:00"></td>
+            <td data-jour="mercredi" data-heure="16:00"></td>
+            <td data-jour="jeudi" data-heure="16:00"></td>
+            <td data-jour="vendredi" data-heure="16:00"></td>
+            <td data-jour="samedi" data-heure="16:00"></td>
+            <td data-jour="dimanche" data-heure="16:00"></td>
+        </tr>
+        <tr>
+            <td class="Plheures">17:00</td>
+            <td data-jour="lundi" data-heure="17:00"></td>
+            <td data-jour="mardi" data-heure="17:00"></td>
+            <td data-jour="mercredi" data-heure="17:00"></td>
+            <td data-jour="jeudi" data-heure="17:00"></td>
+            <td data-jour="vendredi" data-heure="17:00"></td>
+            <td data-jour="samedi" data-heure="17:00"></td>
+            <td data-jour="dimanche" data-heure="17:00"></td>
+        </tr>
+        <tr>
+            <td class="Plheures">18:00</td>
+            <td data-jour="lundi" data-heure="18:00"></td>
+            <td data-jour="mardi" data-heure="18:00"></td>
+            <td data-jour="mercredi" data-heure="18:00"></td>
+            <td data-jour="jeudi" data-heure="18:00"></td>
+            <td data-jour="vendredi" data-heure="18:00"></td>
+            <td data-jour="samedi" data-heure="18:00"></td>
+            <td data-jour="dimanche" data-heure="18:00"></td>
+        </tr>
+        <tr>
+            <td class="Plheures">19:00</td>
+            <td data-jour="lundi" data-heure="19:00"></td>
+            <td data-jour="mardi" data-heure="19:00"></td>
+            <td data-jour="mercredi" data-heure="19:00"></td>
+            <td data-jour="jeudi" data-heure="19:00"></td>
+            <td data-jour="vendredi" data-heure="19:00"></td>
+            <td data-jour="samedi" data-heure="19:00"></td>
+            <td data-jour="dimanche" data-heure="19:00"></td>
+        </tr>
+        <tr>
+            <td id="Plheures">20:00</td>
+            <td data-jour="lundi" data-heure="20:00"></td>
+            <td data-jour="mardi" data-heure="20:00"></td>
+            <td data-jour="mercredi" data-heure="20:00"></td>
+            <td data-jour="jeudi" data-heure="20:00"></td>
+            <td data-jour="vendredi" data-heure="20:00"></td>
+            <td data-jour="samedi" data-heure="20:00"></td>
+            <td data-jour="dimanche" data-heure="20:00"></td>
+        </tr>
+    </table>
+    </div>
+    <button onclick="resetEvenements()">Effacer tout les événements</button>
+</body>
+</html>
