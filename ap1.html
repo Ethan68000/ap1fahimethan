@@ -12,8 +12,8 @@
     <header>
         <nav>
             <ul>
-                <details id="parametrer">
-                    <summary>Ajouter un evenement</summary>
+                <details id="parametrer"> <!--c'est pour cacher qqc et que ca se deplie-->
+                    <summary>Ajouter un evenement</summary> <!--Titre du details-->
                     <br>
                     <li><a href="evenement.html">Ajouter un evenement</a>
                 </details>
@@ -21,13 +21,11 @@
         </nav>
     </header>
     <br>
-    <div id="main">
-        <div id="planning" class="planning">
-            <div id="surenteteplanning">
-                <button  onclick="semaineMoins()" title="semaine précedente"><</button>
-                <strong>Planning</strong>
-                <button  onclick="semainePlus()" title="semaine suivante">></button>
-            </div>
+    <div id="planning" class="planning">
+        <div id="surenteteplanning">
+            <button  onclick="semaineMoins()" title="semaine précedente"><</button>
+            <strong>Planning</strong>
+            <button  onclick="semainePlus()" title="semaine suivante">></button>
         </div>
     </div>
     <table border="1">
@@ -42,8 +40,8 @@
             <td id="dimanche">Dimanche</td>
         </tr>
         <tr>
-            <td class="Plheures">08:00</td>
-            <td data-jour="lundi" data-heure="08:00"></td>
+            <td>08:00</td>
+            <td data-jour="lundi" data-heure="08:00"></td> <!--mettre datejour et dateheure pour afficher evenement-->
             <td data-jour="mardi" data-heure="08:00"></td>
             <td data-jour="mercredi" data-heure="08:00"></td>
             <td data-jour="jeudi" data-heure="08:00"></td>
@@ -53,7 +51,7 @@
         </tr>
         
         <tr>
-            <td id="Plheures">09:00</td>
+            <td>09:00</td>
             <td data-jour="lundi" data-heure="09:00"></td>
             <td data-jour="mardi" data-heure="09:00"></td>
             <td data-jour="mercredi" data-heure="09:00"></td>
@@ -63,7 +61,7 @@
             <td data-jour="dimanche" data-heure="09:00"></td>
         </tr>
         <tr>
-            <td id="Plheures">10:00</td>
+            <td>10:00</td>
             <td data-jour="lundi" data-heure="10:00"></td>
             <td data-jour="mardi" data-heure="10:00"></td>
             <td data-jour="mercredi" data-heure="10:00"></td>
@@ -73,7 +71,7 @@
             <td data-jour="dimanche" data-heure="10:00"></td>
         </tr>
         <tr>
-            <td id="Plheures">11:00</td>
+            <td>11:00</td>
             <td data-jour="lundi" data-heure="11:00"></td>
             <td data-jour="mardi" data-heure="11:00"></td>
             <td data-jour="mercredi" data-heure="11:00"></td>
@@ -83,7 +81,7 @@
             <td data-jour="dimanche" data-heure="11:00"></td>
         </tr>
         <tr>
-            <td id="Plheures">12:00</td>
+            <td>12:00</td>
             <td data-jour="lundi" data-heure="12:00"></td>
             <td data-jour="mardi" data-heure="12:00"></td>
             <td data-jour="mercredi" data-heure="12:00"></td>
@@ -93,7 +91,7 @@
             <td data-jour="dimanche" data-heure="12:00"></td>
         </tr>
         <tr>
-            <td id="Plheures">13:00</td>
+            <td>13:00</td>
             <td data-jour="lundi" data-heure="13:00"></td>
             <td data-jour="mardi" data-heure="13:00"></td>
             <td data-jour="mercredi" data-heure="13:00"></td>
@@ -103,7 +101,7 @@
             <td data-jour="dimanche" data-heure="13:00"></td>
         </tr>
         <tr>
-            <td class="Plheures">14:00</td>
+            <td>14:00</td>
             <td data-jour="lundi" data-heure="14:00"></td>
             <td data-jour="mardi" data-heure="14:00"></td>
             <td data-jour="mercredi" data-heure="14:00"></td>
@@ -113,7 +111,7 @@
             <td data-jour="dimanche" data-heure="14:00"></td>
         </tr>
         <tr>
-            <td class="Plheures">15:00</td>
+            <td>15:00</td>
             <td data-jour="lundi" data-heure="15:00"></td>
             <td data-jour="mardi" data-heure="15:00"></td>
             <td data-jour="mercredi" data-heure="15:00"></td>
@@ -123,7 +121,7 @@
             <td data-jour="dimanche" data-heure="15:00"></td>
         </tr>
         <tr>
-            <td class="Plheures">16:00</td>
+            <td>16:00</td>
             <td data-jour="lundi" data-heure="16:00"></td>
             <td data-jour="mardi" data-heure="16:00"></td>
             <td data-jour="mercredi" data-heure="16:00"></td>
@@ -133,7 +131,7 @@
             <td data-jour="dimanche" data-heure="16:00"></td>
         </tr>
         <tr>
-            <td class="Plheures">17:00</td>
+            <td>17:00</td>
             <td data-jour="lundi" data-heure="17:00"></td>
             <td data-jour="mardi" data-heure="17:00"></td>
             <td data-jour="mercredi" data-heure="17:00"></td>
@@ -143,7 +141,7 @@
             <td data-jour="dimanche" data-heure="17:00"></td>
         </tr>
         <tr>
-            <td class="Plheures">18:00</td>
+            <td>18:00</td>
             <td data-jour="lundi" data-heure="18:00"></td>
             <td data-jour="mardi" data-heure="18:00"></td>
             <td data-jour="mercredi" data-heure="18:00"></td>
@@ -153,7 +151,7 @@
             <td data-jour="dimanche" data-heure="18:00"></td>
         </tr>
         <tr>
-            <td class="Plheures">19:00</td>
+            <td>19:00</td>
             <td data-jour="lundi" data-heure="19:00"></td>
             <td data-jour="mardi" data-heure="19:00"></td>
             <td data-jour="mercredi" data-heure="19:00"></td>
@@ -163,7 +161,7 @@
             <td data-jour="dimanche" data-heure="19:00"></td>
         </tr>
         <tr>
-            <td id="Plheures">20:00</td>
+            <td>20:00</td>
             <td data-jour="lundi" data-heure="20:00"></td>
             <td data-jour="mardi" data-heure="20:00"></td>
             <td data-jour="mercredi" data-heure="20:00"></td>
