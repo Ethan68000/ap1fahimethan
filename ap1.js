@@ -8,10 +8,14 @@ function joursemaine() {
     // Crée une nouvelle date pour le lundi de la semaine actuelle
     currentMonday = new Date(today);
     
-    // Calcule la date du lundi en soustrayant le nombre de jours approprié
-    // Si c'est dimanche (dayOfWeek === 0), on soustrait 6 jours pour obtenir le lundi précédent
-    // Sinon, on soustrait (dayOfWeek - 1) pour obtenir le lundi de la même semaine
-    currentMonday.setDate(today.getDate() - (dayOfWeek === 0 ? 6 : dayOfWeek - 1));
+        // Si dimanche
+    if (dayOfWeek === 0) {
+        // Si c'est dimanche, on soustrait 6 jours pour obtenir le lundi précédent
+        currentMonday.setDate(today.getDate() - 6);
+    } else {
+        // Sinon, décalage d'un jour car commencement a dimache
+        currentMonday.setDate(today.getDate() - (dayOfWeek - 1));
+    }
     
     // Appelle la fonction afficherSemaine en passant le lundi calculé
     afficherSemaine(currentMonday);
