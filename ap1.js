@@ -98,13 +98,13 @@ function afficherEvenements() {
     const events = JSON.parse(localStorage.getItem("events")) || [];
 
     // Réinitialisation des cellules avant d'afficher les événements
-    document.querySelectorAll("td[data-heure]").forEach(cell => {  //cela va prend la cellule avec le td correpondante et va changer la couleur
+    document.querySelectorAll("td[data-heure]").forEach(cell => {
         cell.style.backgroundColor = ""; // Réinitialisation du fond
         cell.innerHTML = ""; // Effacer le contenu
     });
 
     // Boucle pour afficher chaque événement
-    events.forEach(evenement => {
+    events.forEach((evenement, index) => {
         const jourdepart = evenement.jourdepart;
         const jourfin = evenement.jourfin;
         const heuredebut = evenement.heuredebut;
@@ -122,10 +122,18 @@ function afficherEvenements() {
         // Appliquer la couleur et le texte de l'événement sur la cellule correspondante
         if (affichage) {
             affichage.style.backgroundColor = evenement.colorevent; // Applique la couleur
-            affichage.innerHTML = `<strong class="event">${evenement.nomevent}<br>${heuredebut} - ${heurefin} </strong>`; // Affiche l'événement avec les heures
+            affichage.innerHTML = `<strong class="event">${evenement.nomevent}<br>${heuredebut} - ${heurefin}</strong>
+                                   <button onclick="supprimerEvenement(${index})">Supprimer</button>`; // Ajoute le bouton Supprimer
         }
     });
     console.log(events);
+}
+
+function supprimerEvenement(index) {
+    let events = JSON.parse(localStorage.getItem("events")) || [];
+    events.splice(index, 1); // Supprime l'événement à l'index spécifié
+    localStorage.setItem("events", JSON.stringify(events)); // Met à jour le localStorage
+    afficherEvenements(); // Met à jour l'affichage
 }
 
 function resetEvenements() {
