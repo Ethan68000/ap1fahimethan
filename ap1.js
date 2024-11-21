@@ -38,7 +38,18 @@ function afficherSemaine(monday) {
             // Met à jour le contenu de l'élément avec le jour de la semaine et la date formatée
             element.innerHTML = `${jour.charAt(0).toUpperCase() + jour.slice(1)} ${formattedDate}`;
         }
+        afficherDatePlanning(monday);
     });
+}
+
+function afficherDatePlanning(monday) {
+    const mois = monday.toLocaleString('fr-FR', { month: 'long' });
+    const annee = monday.getFullYear();
+    const datePlanningElement = document.getElementById("datePlanning");
+    
+    if (datePlanningElement) {
+        datePlanningElement.innerHTML = `${mois.charAt(0).toUpperCase() + mois.slice(1)} ${annee}`;
+    }
 }
 
 function semainePlus() {
@@ -111,7 +122,7 @@ function afficherEvenements() {
         // Appliquer la couleur et le texte de l'événement sur la cellule correspondante
         if (affichage) {
             affichage.style.backgroundColor = evenement.colorevent; // Applique la couleur
-            affichage.innerHTML = `<strong class="event">${evenement.nomevent}</strong>`; // Affiche l'événement
+            affichage.innerHTML = `<strong class="event">${evenement.nomevent}<br>${heuredebut} - ${heurefin} </strong>`; // Affiche l'événement avec les heures
         }
     });
     console.log(events);

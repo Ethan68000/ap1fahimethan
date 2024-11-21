@@ -7,6 +7,12 @@
 
 }
 
+#surenteteplanning #datePlanning{
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+}
+
 #planning button {
     background: none;
     border: none;          
@@ -65,7 +71,7 @@ table {
 
 .event {
     background-color: transparent; /* Pas besoin de définir ici, car la couleur est appliquée dans JavaScript */
-    color: blue; /* Changez cela selon vos besoins */
+    color: white; /* Changez cela selon vos besoins */
     padding: 5px;
     border-radius: 4px;
     font-size: 0.9em;
