@@ -93,7 +93,7 @@ function afficherdetail(event) {
     events.push(evenement);
     localStorage.setItem("events", JSON.stringify(events));
 
-    alert("Recap de l'évenement \n nom : " + nomevent + "\ndepart évenement : " + jourdepart + " à " +heuredebut+ "\nfin de l'évenement : " +jourfin+ " à " +heurefin);
+    alert("Recap de l'évenement \nnom : " + nomevent + "\ndepart évenement : " + jourdepart + " à " +heuredebut+ "\nfin de l'évenement : " +jourfin+ " à " +heurefin);
     afficherEvenements(); // Afficher immédiatement l'événement
     window.location.href = 'ap1.html'; // Retourne au planning
 }

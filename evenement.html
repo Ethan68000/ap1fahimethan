@@ -8,8 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Formulaire de Planning</h1>
-    <form onsubmit="afficherdetail(event)"> <!-- ça va prendre en compte afficherdetail-->
+    <form class="planning-form" onsubmit="afficherdetail(event)">
+        <h1>Formulaire de Planning</h1>
         <label for="nomevent">nom de l'évenement :</label>
         <input type="text" id="nomevent" required><br><br>
 
@@ -28,7 +28,7 @@
         <label for="colorevent">Couleur de l'évenement :</label>
         <input type="color" id="colorevent" required><br><br>
 
-        <input type="submit" value="validez">
+        <input type="submit" value="validez" id="boutonvalidez">
         <button type="button" onclick="window.location.href='ap1.html';">Revenir au planning</button>
     </form>
 </body>

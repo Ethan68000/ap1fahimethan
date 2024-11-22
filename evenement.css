@@ -1,5 +1,21 @@
-
 body {
-    background-color: #f0f0f0;
+    background: linear-gradient(to right, #00c6ff, #7d00ff);
+    height: 100vh; /* Assure que l'arrière-plan couvre toute la hauteur */
+    margin: 0; /* Supprime les marges */
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
+h1 {
+    text-align: center; /* Centre le titre */
+    margin-bottom: 20px; /* Ajoute un espacement en bas du titre */
+}
+
+.planning-form {
+    background-color: white; /* Fond blanc pour le formulaire */
+    padding: 20px; /* Ajoute de l'espace à l'intérieur de l'encadré */
+    border-radius: 10px; /* Bords arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour donner un effet de profondeur */
+    width: 300px; /* Largeur fixe pour le formulaire, ajustez selon vos besoins */
+}
