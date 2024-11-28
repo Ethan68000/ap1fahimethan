@@ -10,7 +10,7 @@ body {
 h1 {
     text-align: center; /* Centre le titre */
     margin-bottom: 20px; /* Ajoute un espacement en bas du titre */
-}
+} 
 
 .planning-form {
     background-color: white; /* Fond blanc pour le formulaire */
