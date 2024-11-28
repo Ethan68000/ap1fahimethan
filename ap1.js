@@ -127,10 +127,13 @@ function afficherEvenements() {
         if (affichage) {
             affichage.style.backgroundColor = evenement.colorevent; // Applique la couleur
             affichage.innerHTML = `<strong class="event">${evenement.nomevent}<br>${heuredebut} - ${heurefin}</strong>
-                                   <button onclick="supprimerEvenement(${index})">Supprimer</button>`; // Ajoute le bouton Supprimer
+                                   <button onclick="supprimerEvenement(${index})">Supprimer</button> <button onclick="modifierEvenement(${index})">Modifier</button>`; // Ajoute le bouton Supprimer et modifier 
         }
     });
     console.log(events);
+}
+function modifierEvenement(index){
+
 }
 
 function supprimerEvenement(index) {

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="evenement.css" rel="stylesheet">
+    <script src="ap1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="modifierEvenementForm" style="display:none;">
+        <h2>Modifier l'événement</h2>
+        <label for="nomevent">Nom de l'événement:</label>
+        <input type="text" id="nomevent" required>
+        
+        <label for="jourdepart">Jour de départ:</label>
+        <input type="date" id="jourdepart" required>
+        
+        <label for="jourfin">Jour de fin:</label>
+        <input type="date" id="jourfin" required>
+        
+        <label for="heuredebut">Heure de début:</label>
+        <input type="time" id="heuredebut" required>
+        
+        <label for="heurefin">Heure de fin:</label>
+        <input type="time" id="heurefin" required>
+        
+        <label for="colorevent">Couleur de l'événement:</label>
+        <input type="color" id="colorevent" required>
+        
+        <button onclick="sauvegarderModification()">Sauvegarder les modifications</button>
+        <button onclick="window.location.href='ap1.html';">Revenir au planning</button>
+    </div>
+</body>
+</html>
