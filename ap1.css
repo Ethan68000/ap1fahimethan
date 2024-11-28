@@ -24,6 +24,8 @@
 table tr:first-child td {
     background-color: rgba(204, 198, 198,0.5);
     border: none;
+    position: sticky; /* permet que sa descend */
+    top: 0px;
 }
 td{
     padding: 5px;
