@@ -68,6 +68,14 @@ function semaineMoins() {
     afficherEvenements();
 }
 
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowRight') {
+        semainePlus();
+    } else if (event.key === 'ArrowLeft') {
+        semaineMoins(); 
+    }
+});
+
 window.onload = function() {
     joursemaine();
 };
