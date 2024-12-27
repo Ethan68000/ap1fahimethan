@@ -59,13 +59,11 @@ function afficherDatePlanning(monday) {
 function semainePlus() {
     currentMonday.setDate(currentMonday.getDate() + 7); //ajoute 7 jours à la date
     afficherSemaine(currentMonday);
-    afficherEvenements();
 }
 
 function semaineMoins() {
     currentMonday.setDate(currentMonday.getDate() - 7); //enleve 7 jours à la date
     afficherSemaine(currentMonday);
-    afficherEvenements();
 }
 
 document.addEventListener('keydown', function(event) {
@@ -76,6 +74,13 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+ function resetEvenements() {
+    localStorage.removeItem("events"); // Supprime la clé "events" du localStorage
+    alert("Tous les événements ont été réinitialisés.");
+}
+
 window.onload = function() {
+    console.log("LocalStorage au chargement de ap1.html :");
+    console.log(JSON.parse(localStorage.getItem("events")));
     joursemaine();
 };
