@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="ap1.css" rel="stylesheet">
-    <script src="ap1.js"></script>
     <script src="evenement.js"></script>
     <script src="Planning.js"></script>
+    <script src="ap1.js"></script>
     <title>AP1 planning web</title>
 </head>
 <body>
@@ -26,12 +26,12 @@
     <div id="planning" class="planning">
         <div id="surenteteplanning">
             <div id="datePlanning"></div>
-            <button  onclick="semaineMoins()" title="semaine précedente"><</button>
+            <button onclick="semaineMoins()" title="semaine précédente"><</button>
             <strong>Planning</strong>
-            <button  onclick="semainePlus()" title="semaine suivante">></button>
+            <button onclick="semainePlus()" title="semaine suivante">></button>
         </div>
     </div>
-    <table border="1">
+    <table border="1" id="planningTable">
         <tr>
             <td>heures</td>
             <td id="lundi">Lundi</td>
