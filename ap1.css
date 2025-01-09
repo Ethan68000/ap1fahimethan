@@ -4,25 +4,29 @@ body{
 #surenteteplanning {
     background: linear-gradient(to right, rgba(0, 198, 255, 0.5), rgba(125, 0, 255, 0.5));
     color: rgb(128, 17, 128);
-    text-align: right;
-    padding: 10px;
-    font-size: 1.3em;
+    padding: 20px;
+    font-size: 1.4em;
     margin-left: 2%;
     margin-right: 2%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
-#surenteteplanning #datePlanning{
+#surenteteplanning #datePlanning {
     text-align: center;
     color: black;
-    text-decoration: underline;
 }
 
 #planning button {
     background: none;
     border: none;          
     color: rgb(128, 17, 128); 
-    font-size: 1.2em;       
+    font-size: 1.3em;       
     cursor: pointer;
+    margin: 0 10px; /* Ajoute un espace entre les boutons et le texte */
 }
 
 table tr:first-child td {

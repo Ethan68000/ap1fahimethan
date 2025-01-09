@@ -42,12 +42,13 @@ function afficherSemaine(monday) {
 }
 
 function afficherDatePlanning(monday) {
+    const jours = monday.getDate() ;
     const mois = monday.toLocaleString('fr-FR', { month: 'long' });
     const annee = monday.getFullYear();
     const datePlanningElement = document.getElementById("datePlanning");
     
  if (datePlanningElement) {
-        datePlanningElement.innerHTML = `${mois.charAt(0).toUpperCase() + mois.slice(1)} ${annee}`;
+        datePlanningElement.innerHTML = ` Semaine du ${jours} ${mois.charAt(0).toUpperCase() + mois.slice(1)} ${annee}`;
     }
 }
 
