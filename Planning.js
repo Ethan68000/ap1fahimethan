@@ -34,7 +34,6 @@ class Planning {
                                                 <strong>${evenement.nomevent}</strong><br>
                                                 ${heuredebut} - ${heurefin}<br>
                                                 <button onclick="supprimerEvenement(${index})">Supprimer</button>
-                                                <button onclick="modifierEvenement(${index})">Modifier</button>
                                             </div>`;
                     }
                 } else {

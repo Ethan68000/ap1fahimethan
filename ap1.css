@@ -1,10 +1,14 @@
-#surenteteplanning{
-    background-color: rgba(204, 198, 198, 0.5); /* fond avec shadow */
+body{
+    background: rgba(104, 214, 244, 0.5);
+}
+#surenteteplanning {
+    background: linear-gradient(to right, rgba(0, 198, 255, 0.5), rgba(125, 0, 255, 0.5));
     color: rgb(128, 17, 128);
     text-align: right;
     padding: 10px;
     font-size: 1.3em;
-
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 #surenteteplanning #datePlanning{
@@ -27,6 +31,11 @@ table tr:first-child td {
     position: sticky; /* permet que sa descend */
     top: 0px;
 }
+
+table tr:nth-child(even) {
+    background-color: rgba(128, 128, 128, 0.1); /* Fond gris clair */
+}
+
 td{
     padding: 5px;
     text-align: center;
@@ -49,18 +58,27 @@ header nav ul li {
     margin-right: 10px;
 }
 
-header nav ul li a {
+header nav ul details li a  {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 16px;
     color: #000000;
-    background-color: rgba(140, 88, 231, 0.5); /* Fond légèrement violet pour inactif */
-}
-
-header nav ul details li a  {
     background-color: white;
     border: 1px solid black ;
+    font-family: "Times New Roman", Times, serif;
+}
+
+header nav ul details li button  {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #000000;
+    background-color: white;
+    border: 1px solid black ;
+    font-family: "Times New Roman", Times, serif;
+
 }
 #parametrer {
     margin-left: auto;
@@ -69,6 +87,9 @@ header nav ul details li a  {
 
 table {
     border: none;
+    background-color: white;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .event {
