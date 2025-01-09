@@ -19,6 +19,8 @@ class Planning {
             let currentDate = new Date(`${jourdepart}T${heuredebut}`);
             const dateFin = new Date(`${jourfin}T${heurefin}`);
     
+            let firstCell = true; // Variable pour identifier la première cellule
+    
             while (currentDate <= dateFin) {
                 const jour = currentDate.toLocaleDateString("fr-FR", { weekday: 'long' }).toLowerCase();
                 const heure = currentDate.getHours().toString().padStart(2, '0') + ":00";
@@ -29,12 +31,14 @@ class Planning {
                 if (cellule) {
                     console.log(`Cellule trouvée pour jour=${jour}, heure=${heure}`);
                     cellule.style.backgroundColor = evenement.colorevent;
-                    if (!cellule.innerHTML) {
+    
+                    if (firstCell && !cellule.innerHTML) {
                         cellule.innerHTML = `<div class="event">
                                                 <strong>${evenement.nomevent}</strong><br>
                                                 ${heuredebut} - ${heurefin}<br>
                                                 <button onclick="supprimerEvenement(${index})">Supprimer</button>
                                             </div>`;
+                        firstCell = false; // La première cellule est désormais traitée
                     }
                 } else {
                     console.log(`Cellule introuvable pour jour=${jour}, heure=${heure}`);
@@ -44,6 +48,7 @@ class Planning {
             }
         });
     }
+    
     
     ajoutEvenement(evenement) {
         // Ajout d'un événement dans le localStorage
