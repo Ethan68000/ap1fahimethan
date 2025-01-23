@@ -59,6 +59,7 @@ function semainePlus() {
     } else {
         console.error("currentMonday n'est pas défini");
     }
+    planning.afficherEvenements();
 }
 
 function semaineMoins() {
@@ -68,6 +69,7 @@ function semaineMoins() {
     } else {
         console.error("currentMonday n'est pas défini");
     }
+    planning.afficherEvenements();
 }
 
 document.addEventListener('keydown', function(event) {
@@ -82,6 +84,7 @@ function resetEvenements() {
     if (confirm("Êtes-vous sûr de vouloir réinitialiser tous les événements ?")) {
         localStorage.removeItem("events");
         alert("Tous les événements ont été réinitialisés.");
+        planning.afficherEvenements();
     }
 }
 

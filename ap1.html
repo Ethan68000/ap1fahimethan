@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Lien vers les autres fichiers-->
     <link href="ap1.css" rel="stylesheet">
-    <script src="evenement.js"></script>
+    <script src="evenement.js"></script> 
     <script src="Planning.js"></script>
     <script src="ap1.js"></script>
     <title>AP1 planning web</title>
@@ -17,14 +18,15 @@
                 <details id="parametrer"> <!--c'est pour cacher qqc et que ca se deplie-->
                     <summary>Evenement</summary> <!--Titre du details-->
                     <br>
-                    <li><a href="evenement.html">Ajouter un evenement</a></li>
+                    <li><a href="evenement.html">Ajouter un evenement</a></li> <!--Lien vers le formulaire de création-->
                     <br>
-                    <li><button onclick="resetEvenements()">Effacer tout les événements</button></li>
+                    <li><button onclick="resetEvenements()">Effacer tout les événements</button></li> 
                 </details>
             </ul>
         </nav>
     </header>
     <br>
+    <!--Sur entête planning pour afficher la semaine et chager de semaine -->
     <div id="planning" class="planning">
         <div id="surenteteplanning">
             <button onclick="semaineMoins()" title="semaine précédente"><</button>
@@ -32,7 +34,9 @@
             <button onclick="semainePlus()" title="semaine suivante">></button>
         </div>
     </div>
+    <!--Création du tableau-->
     <table border="1" id="planningTable">
+        <!-- Première ligne pour mettre chaque jour de la semaine-->
         <tr>
             <td>heures</td>
             <td id="lundi">Lundi</td>
@@ -43,6 +47,7 @@
             <td id="samedi">Samedi</td>
             <td id="dimanche">Dimanche</td>
         </tr>
+        <!--Pour chaque heure il y a aura les 7 cases pour chaque jour de la semaine et l’heure correspondantes. Cela permettra de relier à la création d’Evenement-->
         <tr>
             <td>00:00</td>
             <td data-jour="lundi" data-heure="00:00"></td>

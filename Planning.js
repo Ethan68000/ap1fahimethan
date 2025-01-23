@@ -30,12 +30,12 @@ class Planning {
     
                 if (cellule) {
                     console.log(`Cellule trouvée pour jour=${jour}, heure=${heure}`);
-                    cellule.style.backgroundColor = evenement.colorevent;
+                    cellule.style.backgroundColor = evenement.colorevent; //couleur de fond de l’évènement 
     
-                    if (firstCell && !cellule.innerHTML) {
+                    if (firstCell && !cellule.innerHTML) { //contenu de l'évènement
                         cellule.innerHTML = `<div class="event">
                                                 <strong>${evenement.nomevent}</strong><br>
-                                                ${heuredebut} - ${heurefin}<br>
+                                                ${heuredebut} - ${heurefin}<br> 
                                                 <button onclick="supprimerEvenement(${index})">Supprimer</button>
                                             </div>`;
                         firstCell = false; // La première cellule est désormais traitée
@@ -44,7 +44,7 @@ class Planning {
                     console.log(`Cellule introuvable pour jour=${jour}, heure=${heure}`);
                 }
     
-                currentDate.setHours(currentDate.getHours() + 1);
+                currentDate.setHours(currentDate.getHours() + 1); //on ajoute 1 heure car sinon il y a un décalage 
             }
         });
     }
@@ -58,7 +58,7 @@ class Planning {
         this.afficherEvenements(); // Mise à jour de l'affichage
     }
 
-    supprimerEvenement(index) {
+    supprimerEvenement(index) { 
         // Suppression d'un événement par son index
         let events = JSON.parse(localStorage.getItem("events")) || [];
         events.splice(index, 1);
@@ -66,7 +66,7 @@ class Planning {
         this.afficherEvenements(); // Mise à jour de l'affichage
     }
 
-    modifierEvenement(index) {
+    modifierEvenement(index) { /* Pas pu faire */
         const events = JSON.parse(localStorage.getItem("events")) || [];
         const evenement = events[index];
 

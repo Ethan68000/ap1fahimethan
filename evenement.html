@@ -10,10 +10,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form class="planning-form" onsubmit="afficherdetail(event)">
+    <!-- Début du formulaire-->
+    <form class="planning-form" onsubmit="afficherdetail(event)"> <!-- A la validation cela va appeler la fonction afficherdetail-->
         <h1>Formulaire de Planning</h1>
         <label for="nomevent">nom de l'évenement :</label>
-        <input type="text" id="nomevent" required><br><br>
+        <input type="text" id="nomevent" required><br><br> <!-- Required pour dire que c'est obligatoire-->
 
         <label for="jourdepart">Jour de début :</label>
         <input type="date" id="jourdepart" required><br><br>
@@ -30,8 +31,8 @@
         <label for="colorevent">Couleur de l'évenement :</label>
         <input type="color" id="colorevent" required><br><br>
 
-        <input type="submit" value="validez" id="boutonvalidez">
-        <button type="button" onclick="window.location.href='ap1.html';">Revenir au planning</button>
+        <input type="submit" value="validez" id="boutonvalidez"> <!--Validation de l'évènement -->
+        <button type="button" onclick="window.location.href='ap1.html';">Revenir au planning</button> <!-- Lien vers le pllaning de base si on appuie sur le bouton-->
     </form>
 </body>
 </html>

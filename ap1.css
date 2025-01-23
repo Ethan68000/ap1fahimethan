@@ -1,6 +1,8 @@
+/* design de la page en global */
 body{
     background: rgba(104, 214, 244, 0.5);
 }
+/* design de la sur entête */
 #surenteteplanning {
     background: linear-gradient(to right, rgba(0, 198, 255, 0.5), rgba(125, 0, 255, 0.5));
     color: rgb(128, 17, 128);
@@ -19,7 +21,7 @@ body{
     text-align: center;
     color: black;
 }
-
+/* Design du bouton du planning */
 #planning button {
     background: none;
     border: none;          
@@ -28,7 +30,7 @@ body{
     cursor: pointer;
     margin: 0 10px; /* Ajoute un espace entre les boutons et le texte */
 }
-
+/* design de la 1ère ligne du tableau */
 table tr:first-child td {
     background-color: rgba(204, 198, 198,0.5);
     border: none;
@@ -36,6 +38,7 @@ table tr:first-child td {
     top: 0px;
 }
 
+/* design des lignes paires */
 table tr:nth-child(even) {
     background-color: rgba(128, 128, 128, 0.1); /* Fond gris clair */
 }
@@ -52,7 +55,7 @@ td:first-child {
 td:not(:first-child) {
     width: 250px;
 }
-
+/* Design de la barre de navigation avec les 2 boutons */
 header nav ul {
     list-style: none;
     padding: 0;
@@ -89,6 +92,7 @@ header nav ul details li button  {
     font-size: 16px;
 }
 
+/* design du tableau */
 table {
     border: none;
     background-color: white;
@@ -96,8 +100,9 @@ table {
     margin-right: 2%;
 }
 
+/* Design de l'évènement*/
 .event {
-    background-color: transparent; /* Pas besoin de définir ici, car la couleur est appliquée dans JavaScript */
+    background-color: transparent;
     color: white; /* Changez cela selon vos besoins */
     padding: 5px;
     border-radius: 4px;
